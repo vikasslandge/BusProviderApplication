@@ -55,5 +55,12 @@ namespace BusProviderApplication.Controllers
 
             return PartialView("_GetBusDetails",soapClient.GetBusDetails());
         }
+
+        public PartialViewResult SeatBook()
+        {
+            
+
+            return PartialView("_SeatLayout");
+        }
     }
 }

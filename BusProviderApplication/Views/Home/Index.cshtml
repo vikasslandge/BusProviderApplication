@@ -6,13 +6,15 @@
 
 <h2>Welcome to The Gaurdian</h2>
 <p style="font-size:x-large; font-style:oblique">
-    @Ajax.ActionLink("provider list", "GetProviders", new AjaxOptions() { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "providerlist" })
+    @Ajax.ActionLink("provider list ", "GetProviders", new AjaxOptions() { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "providerlist" })
 
-    @Ajax.ActionLink("Add Provider", "InsertProviderDetail", new AjaxOptions() { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "providerlist" })
+    @Ajax.ActionLink("Add Provider ", "InsertProviderDetail", new AjaxOptions() { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "providerlist" })
 
-    @Ajax.ActionLink("Add Bus", "InsertBusDetail", new AjaxOptions() { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "providerlist" })
+    @Ajax.ActionLink("Add Bus ", "InsertBusDetail", new AjaxOptions() { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "providerlist" })
 
-    @Ajax.ActionLink("Bus List", "GetBusDetails", new AjaxOptions() { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "providerlist" })
+    @Ajax.ActionLink("Bus List ", "GetBusDetails", new AjaxOptions() { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "providerlist" })
+
+    @Ajax.ActionLink("Book Seat ", "SeatBook", new AjaxOptions() { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "providerlist" })
 
 </p>
 

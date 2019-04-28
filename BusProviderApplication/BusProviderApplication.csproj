@@ -164,6 +164,7 @@
     <Content Include="Views\Shared\_InsertProvider.cshtml" />
     <Content Include="Views\Shared\_AddBus.cshtml" />
     <Content Include="Views\Shared\_GetBusDetails.cshtml" />
+    <Content Include="Views\Shared\_SeatLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
