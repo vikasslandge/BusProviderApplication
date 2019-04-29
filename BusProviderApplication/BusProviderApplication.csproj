@@ -90,28 +90,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.AddCityDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.AddRouteDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.BookSeatResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.ChangeSeatTypeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.DeleteBusResponse.datasource">
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetBookingStatusesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetProviderDetailsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetProviderDetails_Result.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.HelloWorldResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.InsertBusDetailsResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.InsertIntoProviderResponse.datasource">
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetBookingStatus_Result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetBusDetailsResponse.datasource">
@@ -120,10 +114,19 @@
     <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetBusDetails_Result.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsResponse.datasource">
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetCityDetailsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetBusProviderDetails_Result.datasource">
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetCityDetails_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetRouteDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetRouteDetails_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.InsertBusDetailsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\ProviderServiceReference\ProvidersWebService.disco" />
@@ -140,6 +143,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Connected Services\ProviderServiceReference\ProvidersWebService.wsdl" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -152,7 +156,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <None Include="Connected Services\ProviderServiceReference\ProvidersWebService.wsdl" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
@@ -182,6 +185,10 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Views\Shared\_AddCity.cshtml" />
+    <Content Include="Views\Shared\_CityList.cshtml" />
+    <Content Include="Views\Shared\_SearchRoute.cshtml" />
+    <Content Include="Views\Home\SearchRoute.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

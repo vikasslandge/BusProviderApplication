@@ -15,82 +15,6 @@ namespace BusProviderApplication.ProviderServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetProviderDetails_Result", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class GetProviderDetails_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int ProviderIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string OrganisationNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ContactNoField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int ProviderId {
-            get {
-                return this.ProviderIdField;
-            }
-            set {
-                if ((this.ProviderIdField.Equals(value) != true)) {
-                    this.ProviderIdField = value;
-                    this.RaisePropertyChanged("ProviderId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string OrganisationName {
-            get {
-                return this.OrganisationNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OrganisationNameField, value) != true)) {
-                    this.OrganisationNameField = value;
-                    this.RaisePropertyChanged("OrganisationName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string ContactNo {
-            get {
-                return this.ContactNoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ContactNoField, value) != true)) {
-                    this.ContactNoField = value;
-                    this.RaisePropertyChanged("ContactNo");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GetBusDetails_Result", Namespace="http://tempuri.org/")]
     [System.SerializableAttribute()]
     public partial class GetBusDetails_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -198,33 +122,276 @@ namespace BusProviderApplication.ProviderServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetBusProviderDetails_Result", Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetCityDetails_Result", Namespace="http://tempuri.org/")]
     [System.SerializableAttribute()]
-    public partial class GetBusProviderDetails_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class GetCityDetails_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int CityIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CityStateField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int CityId {
+            get {
+                return this.CityIdField;
+            }
+            set {
+                if ((this.CityIdField.Equals(value) != true)) {
+                    this.CityIdField = value;
+                    this.RaisePropertyChanged("CityId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string CityName {
+            get {
+                return this.CityNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityNameField, value) != true)) {
+                    this.CityNameField = value;
+                    this.RaisePropertyChanged("CityName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string CityState {
+            get {
+                return this.CityStateField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CityStateField, value) != true)) {
+                    this.CityStateField = value;
+                    this.RaisePropertyChanged("CityState");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TimeSpan", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class TimeSpan : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetRouteDetails_Result", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class GetRouteDetails_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int RouteIdField;
+        
+        private int BusIdField;
+        
+        private int SourceIdField;
+        
+        private int DestinationIdField;
+        
+        private System.DateTime DateOfJourneyField;
+        
+        private double PriceField;
+        
+        private BusProviderApplication.ProviderServiceReference.TimeSpan ArrivalTimeField;
+        
+        private BusProviderApplication.ProviderServiceReference.TimeSpan DepartureTimeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int RouteId {
+            get {
+                return this.RouteIdField;
+            }
+            set {
+                if ((this.RouteIdField.Equals(value) != true)) {
+                    this.RouteIdField = value;
+                    this.RaisePropertyChanged("RouteId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+        public int BusId {
+            get {
+                return this.BusIdField;
+            }
+            set {
+                if ((this.BusIdField.Equals(value) != true)) {
+                    this.BusIdField = value;
+                    this.RaisePropertyChanged("BusId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int SourceId {
+            get {
+                return this.SourceIdField;
+            }
+            set {
+                if ((this.SourceIdField.Equals(value) != true)) {
+                    this.SourceIdField = value;
+                    this.RaisePropertyChanged("SourceId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public int DestinationId {
+            get {
+                return this.DestinationIdField;
+            }
+            set {
+                if ((this.DestinationIdField.Equals(value) != true)) {
+                    this.DestinationIdField = value;
+                    this.RaisePropertyChanged("DestinationId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public System.DateTime DateOfJourney {
+            get {
+                return this.DateOfJourneyField;
+            }
+            set {
+                if ((this.DateOfJourneyField.Equals(value) != true)) {
+                    this.DateOfJourneyField = value;
+                    this.RaisePropertyChanged("DateOfJourney");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
+        public double Price {
+            get {
+                return this.PriceField;
+            }
+            set {
+                if ((this.PriceField.Equals(value) != true)) {
+                    this.PriceField = value;
+                    this.RaisePropertyChanged("Price");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=6)]
+        public BusProviderApplication.ProviderServiceReference.TimeSpan ArrivalTime {
+            get {
+                return this.ArrivalTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ArrivalTimeField, value) != true)) {
+                    this.ArrivalTimeField = value;
+                    this.RaisePropertyChanged("ArrivalTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=7)]
+        public BusProviderApplication.ProviderServiceReference.TimeSpan DepartureTime {
+            get {
+                return this.DepartureTimeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DepartureTimeField, value) != true)) {
+                    this.DepartureTimeField = value;
+                    this.RaisePropertyChanged("DepartureTime");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetBookingStatus_Result", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class GetBookingStatus_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         private int BusIdField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BusNameField;
-        
-        private int CapacityField;
+        private int SeatNoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TypeField;
+        private string StatusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string BusNoField;
-        
-        private int ProviderIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string OrganisationNameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ContactNoField;
+        private string SeatTypeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -249,93 +416,41 @@ namespace BusProviderApplication.ProviderServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string BusName {
-            get {
-                return this.BusNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.BusNameField, value) != true)) {
-                    this.BusNameField = value;
-                    this.RaisePropertyChanged("BusName");
-                }
-            }
-        }
-        
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int Capacity {
+        public int SeatNo {
             get {
-                return this.CapacityField;
+                return this.SeatNoField;
             }
             set {
-                if ((this.CapacityField.Equals(value) != true)) {
-                    this.CapacityField = value;
-                    this.RaisePropertyChanged("Capacity");
+                if ((this.SeatNoField.Equals(value) != true)) {
+                    this.SeatNoField = value;
+                    this.RaisePropertyChanged("SeatNo");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
-        public string Type {
+        public string Status {
             get {
-                return this.TypeField;
+                return this.StatusField;
             }
             set {
-                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
-                    this.TypeField = value;
-                    this.RaisePropertyChanged("Type");
+                if ((object.ReferenceEquals(this.StatusField, value) != true)) {
+                    this.StatusField = value;
+                    this.RaisePropertyChanged("Status");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string BusNo {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string SeatType {
             get {
-                return this.BusNoField;
+                return this.SeatTypeField;
             }
             set {
-                if ((object.ReferenceEquals(this.BusNoField, value) != true)) {
-                    this.BusNoField = value;
-                    this.RaisePropertyChanged("BusNo");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
-        public int ProviderId {
-            get {
-                return this.ProviderIdField;
-            }
-            set {
-                if ((this.ProviderIdField.Equals(value) != true)) {
-                    this.ProviderIdField = value;
-                    this.RaisePropertyChanged("ProviderId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string OrganisationName {
-            get {
-                return this.OrganisationNameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.OrganisationNameField, value) != true)) {
-                    this.OrganisationNameField = value;
-                    this.RaisePropertyChanged("OrganisationName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public string ContactNo {
-            get {
-                return this.ContactNoField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.ContactNoField, value) != true)) {
-                    this.ContactNoField = value;
-                    this.RaisePropertyChanged("ContactNo");
+                if ((object.ReferenceEquals(this.SeatTypeField, value) != true)) {
+                    this.SeatTypeField = value;
+                    this.RaisePropertyChanged("SeatType");
                 }
             }
         }
@@ -354,27 +469,6 @@ namespace BusProviderApplication.ProviderServiceReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ProviderServiceReference.ProvidersWebServiceSoap")]
     public interface ProvidersWebServiceSoap {
         
-        // CODEGEN: Generating message contract since element name HelloWorldResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        BusProviderApplication.ProviderServiceReference.HelloWorldResponse HelloWorld(BusProviderApplication.ProviderServiceReference.HelloWorldRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HelloWorld", ReplyAction="*")]
-        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.HelloWorldResponse> HelloWorldAsync(BusProviderApplication.ProviderServiceReference.HelloWorldRequest request);
-        
-        // CODEGEN: Generating message contract since element name GetProviderDetailsResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetProviderDetails", ReplyAction="*")]
-        BusProviderApplication.ProviderServiceReference.GetProviderDetailsResponse GetProviderDetails(BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetProviderDetails", ReplyAction="*")]
-        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetProviderDetailsResponse> GetProviderDetailsAsync(BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequest request);
-        
-        // CODEGEN: Generating message contract since element name name from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertIntoProvider", ReplyAction="*")]
-        BusProviderApplication.ProviderServiceReference.InsertIntoProviderResponse InsertIntoProvider(BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertIntoProvider", ReplyAction="*")]
-        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.InsertIntoProviderResponse> InsertIntoProviderAsync(BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequest request);
-        
         // CODEGEN: Generating message contract since element name busName from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertBusDetails", ReplyAction="*")]
         BusProviderApplication.ProviderServiceReference.InsertBusDetailsResponse InsertBusDetails(BusProviderApplication.ProviderServiceReference.InsertBusDetailsRequest request);
@@ -382,12 +476,11 @@ namespace BusProviderApplication.ProviderServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/InsertBusDetails", ReplyAction="*")]
         System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.InsertBusDetailsResponse> InsertBusDetailsAsync(BusProviderApplication.ProviderServiceReference.InsertBusDetailsRequest request);
         
-        // CODEGEN: Generating message contract since element name busNo from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteBus", ReplyAction="*")]
-        BusProviderApplication.ProviderServiceReference.DeleteBusResponse DeleteBus(BusProviderApplication.ProviderServiceReference.DeleteBusRequest request);
+        bool DeleteBus(int busId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteBus", ReplyAction="*")]
-        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.DeleteBusResponse> DeleteBusAsync(BusProviderApplication.ProviderServiceReference.DeleteBusRequest request);
+        System.Threading.Tasks.Task<bool> DeleteBusAsync(int busId);
         
         // CODEGEN: Generating message contract since element name seatStatus from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BookSeat", ReplyAction="*")]
@@ -410,199 +503,40 @@ namespace BusProviderApplication.ProviderServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBusDetails", ReplyAction="*")]
         System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetBusDetailsResponse> GetBusDetailsAsync(BusProviderApplication.ProviderServiceReference.GetBusDetailsRequest request);
         
-        // CODEGEN: Generating message contract since element name GetBusProviderDetailsResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBusProviderDetails", ReplyAction="*")]
-        BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsResponse GetBusProviderDetails(BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequest request);
+        // CODEGEN: Generating message contract since element name city from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddCityDetails", ReplyAction="*")]
+        BusProviderApplication.ProviderServiceReference.AddCityDetailsResponse AddCityDetails(BusProviderApplication.ProviderServiceReference.AddCityDetailsRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBusProviderDetails", ReplyAction="*")]
-        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsResponse> GetBusProviderDetailsAsync(BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldRequest {
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddCityDetails", ReplyAction="*")]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.AddCityDetailsResponse> AddCityDetailsAsync(BusProviderApplication.ProviderServiceReference.AddCityDetailsRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorld", Namespace="http://tempuri.org/", Order=0)]
-        public BusProviderApplication.ProviderServiceReference.HelloWorldRequestBody Body;
+        // CODEGEN: Generating message contract since element name GetCityDetailsResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCityDetails", ReplyAction="*")]
+        BusProviderApplication.ProviderServiceReference.GetCityDetailsResponse GetCityDetails(BusProviderApplication.ProviderServiceReference.GetCityDetailsRequest request);
         
-        public HelloWorldRequest() {
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetCityDetails", ReplyAction="*")]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetCityDetailsResponse> GetCityDetailsAsync(BusProviderApplication.ProviderServiceReference.GetCityDetailsRequest request);
         
-        public HelloWorldRequest(BusProviderApplication.ProviderServiceReference.HelloWorldRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class HelloWorldRequestBody {
+        // CODEGEN: Generating message contract since element name arrivalTime from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddRouteDetails", ReplyAction="*")]
+        BusProviderApplication.ProviderServiceReference.AddRouteDetailsResponse AddRouteDetails(BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest request);
         
-        public HelloWorldRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class HelloWorldResponse {
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddRouteDetails", ReplyAction="*")]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.AddRouteDetailsResponse> AddRouteDetailsAsync(BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HelloWorldResponse", Namespace="http://tempuri.org/", Order=0)]
-        public BusProviderApplication.ProviderServiceReference.HelloWorldResponseBody Body;
+        // CODEGEN: Generating message contract since element name GetRouteDetailsResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRouteDetails", ReplyAction="*")]
+        BusProviderApplication.ProviderServiceReference.GetRouteDetailsResponse GetRouteDetails(BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequest request);
         
-        public HelloWorldResponse() {
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetRouteDetails", ReplyAction="*")]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetRouteDetailsResponse> GetRouteDetailsAsync(BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequest request);
         
-        public HelloWorldResponse(BusProviderApplication.ProviderServiceReference.HelloWorldResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class HelloWorldResponseBody {
+        // CODEGEN: Generating message contract since element name GetBookingStatusesResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBookingStatuses", ReplyAction="*")]
+        BusProviderApplication.ProviderServiceReference.GetBookingStatusesResponse GetBookingStatuses(BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequest request);
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string HelloWorldResult;
-        
-        public HelloWorldResponseBody() {
-        }
-        
-        public HelloWorldResponseBody(string HelloWorldResult) {
-            this.HelloWorldResult = HelloWorldResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetProviderDetailsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetProviderDetails", Namespace="http://tempuri.org/", Order=0)]
-        public BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequestBody Body;
-        
-        public GetProviderDetailsRequest() {
-        }
-        
-        public GetProviderDetailsRequest(BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class GetProviderDetailsRequestBody {
-        
-        public GetProviderDetailsRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetProviderDetailsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetProviderDetailsResponse", Namespace="http://tempuri.org/", Order=0)]
-        public BusProviderApplication.ProviderServiceReference.GetProviderDetailsResponseBody Body;
-        
-        public GetProviderDetailsResponse() {
-        }
-        
-        public GetProviderDetailsResponse(BusProviderApplication.ProviderServiceReference.GetProviderDetailsResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetProviderDetailsResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public BusProviderApplication.ProviderServiceReference.GetProviderDetails_Result[] GetProviderDetailsResult;
-        
-        public GetProviderDetailsResponseBody() {
-        }
-        
-        public GetProviderDetailsResponseBody(BusProviderApplication.ProviderServiceReference.GetProviderDetails_Result[] GetProviderDetailsResult) {
-            this.GetProviderDetailsResult = GetProviderDetailsResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class InsertIntoProviderRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertIntoProvider", Namespace="http://tempuri.org/", Order=0)]
-        public BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequestBody Body;
-        
-        public InsertIntoProviderRequest() {
-        }
-        
-        public InsertIntoProviderRequest(BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class InsertIntoProviderRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string name;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string contact;
-        
-        public InsertIntoProviderRequestBody() {
-        }
-        
-        public InsertIntoProviderRequestBody(string name, string contact) {
-            this.name = name;
-            this.contact = contact;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class InsertIntoProviderResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="InsertIntoProviderResponse", Namespace="http://tempuri.org/", Order=0)]
-        public BusProviderApplication.ProviderServiceReference.InsertIntoProviderResponseBody Body;
-        
-        public InsertIntoProviderResponse() {
-        }
-        
-        public InsertIntoProviderResponse(BusProviderApplication.ProviderServiceReference.InsertIntoProviderResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class InsertIntoProviderResponseBody {
-        
-        public InsertIntoProviderResponseBody() {
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBookingStatuses", ReplyAction="*")]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetBookingStatusesResponse> GetBookingStatusesAsync(BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -640,18 +574,14 @@ namespace BusProviderApplication.ProviderServiceReference {
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
         public string busNo;
         
-        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-        public int providerId;
-        
         public InsertBusDetailsRequestBody() {
         }
         
-        public InsertBusDetailsRequestBody(string busName, int capacity, string type, string busNo, int providerId) {
+        public InsertBusDetailsRequestBody(string busName, int capacity, string type, string busNo) {
             this.busName = busName;
             this.capacity = capacity;
             this.type = type;
             this.busNo = busNo;
-            this.providerId = providerId;
         }
     }
     
@@ -679,74 +609,6 @@ namespace BusProviderApplication.ProviderServiceReference {
     public partial class InsertBusDetailsResponseBody {
         
         public InsertBusDetailsResponseBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class DeleteBusRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteBus", Namespace="http://tempuri.org/", Order=0)]
-        public BusProviderApplication.ProviderServiceReference.DeleteBusRequestBody Body;
-        
-        public DeleteBusRequest() {
-        }
-        
-        public DeleteBusRequest(BusProviderApplication.ProviderServiceReference.DeleteBusRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class DeleteBusRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string busNo;
-        
-        public DeleteBusRequestBody() {
-        }
-        
-        public DeleteBusRequestBody(string busNo) {
-            this.busNo = busNo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class DeleteBusResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteBusResponse", Namespace="http://tempuri.org/", Order=0)]
-        public BusProviderApplication.ProviderServiceReference.DeleteBusResponseBody Body;
-        
-        public DeleteBusResponse() {
-        }
-        
-        public DeleteBusResponse(BusProviderApplication.ProviderServiceReference.DeleteBusResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class DeleteBusResponseBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public bool DeleteBusResult;
-        
-        public DeleteBusResponseBody() {
-        }
-        
-        public DeleteBusResponseBody(bool DeleteBusResult) {
-            this.DeleteBusResult = DeleteBusResult;
         }
     }
     
@@ -967,42 +829,15 @@ namespace BusProviderApplication.ProviderServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetBusProviderDetailsRequest {
+    public partial class AddCityDetailsRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBusProviderDetails", Namespace="http://tempuri.org/", Order=0)]
-        public BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddCityDetails", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.AddCityDetailsRequestBody Body;
         
-        public GetBusProviderDetailsRequest() {
+        public AddCityDetailsRequest() {
         }
         
-        public GetBusProviderDetailsRequest(BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class GetBusProviderDetailsRequestBody {
-        
-        public GetBusProviderDetailsRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class GetBusProviderDetailsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBusProviderDetailsResponse", Namespace="http://tempuri.org/", Order=0)]
-        public BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsResponseBody Body;
-        
-        public GetBusProviderDetailsResponse() {
-        }
-        
-        public GetBusProviderDetailsResponse(BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsResponseBody Body) {
+        public AddCityDetailsRequest(BusProviderApplication.ProviderServiceReference.AddCityDetailsRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -1011,16 +846,351 @@ namespace BusProviderApplication.ProviderServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class GetBusProviderDetailsResponseBody {
+    public partial class AddCityDetailsRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public BusProviderApplication.ProviderServiceReference.GetBusProviderDetails_Result[] GetBusProviderDetailsResult;
+        public string city;
         
-        public GetBusProviderDetailsResponseBody() {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string state;
+        
+        public AddCityDetailsRequestBody() {
         }
         
-        public GetBusProviderDetailsResponseBody(BusProviderApplication.ProviderServiceReference.GetBusProviderDetails_Result[] GetBusProviderDetailsResult) {
-            this.GetBusProviderDetailsResult = GetBusProviderDetailsResult;
+        public AddCityDetailsRequestBody(string city, string state) {
+            this.city = city;
+            this.state = state;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddCityDetailsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddCityDetailsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.AddCityDetailsResponseBody Body;
+        
+        public AddCityDetailsResponse() {
+        }
+        
+        public AddCityDetailsResponse(BusProviderApplication.ProviderServiceReference.AddCityDetailsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddCityDetailsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool AddCityDetailsResult;
+        
+        public AddCityDetailsResponseBody() {
+        }
+        
+        public AddCityDetailsResponseBody(bool AddCityDetailsResult) {
+            this.AddCityDetailsResult = AddCityDetailsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCityDetailsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCityDetails", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetCityDetailsRequestBody Body;
+        
+        public GetCityDetailsRequest() {
+        }
+        
+        public GetCityDetailsRequest(BusProviderApplication.ProviderServiceReference.GetCityDetailsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetCityDetailsRequestBody {
+        
+        public GetCityDetailsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetCityDetailsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetCityDetailsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetCityDetailsResponseBody Body;
+        
+        public GetCityDetailsResponse() {
+        }
+        
+        public GetCityDetailsResponse(BusProviderApplication.ProviderServiceReference.GetCityDetailsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetCityDetailsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetCityDetails_Result[] GetCityDetailsResult;
+        
+        public GetCityDetailsResponseBody() {
+        }
+        
+        public GetCityDetailsResponseBody(BusProviderApplication.ProviderServiceReference.GetCityDetails_Result[] GetCityDetailsResult) {
+            this.GetCityDetailsResult = GetCityDetailsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddRouteDetailsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddRouteDetails", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequestBody Body;
+        
+        public AddRouteDetailsRequest() {
+        }
+        
+        public AddRouteDetailsRequest(BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddRouteDetailsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int busId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int sourceId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public int destinationId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public System.DateTime dateOfJourney;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public double price;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public BusProviderApplication.ProviderServiceReference.TimeSpan arrivalTime;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public BusProviderApplication.ProviderServiceReference.TimeSpan departureTime;
+        
+        public AddRouteDetailsRequestBody() {
+        }
+        
+        public AddRouteDetailsRequestBody(int busId, int sourceId, int destinationId, System.DateTime dateOfJourney, double price, BusProviderApplication.ProviderServiceReference.TimeSpan arrivalTime, BusProviderApplication.ProviderServiceReference.TimeSpan departureTime) {
+            this.busId = busId;
+            this.sourceId = sourceId;
+            this.destinationId = destinationId;
+            this.dateOfJourney = dateOfJourney;
+            this.price = price;
+            this.arrivalTime = arrivalTime;
+            this.departureTime = departureTime;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddRouteDetailsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddRouteDetailsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.AddRouteDetailsResponseBody Body;
+        
+        public AddRouteDetailsResponse() {
+        }
+        
+        public AddRouteDetailsResponse(BusProviderApplication.ProviderServiceReference.AddRouteDetailsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddRouteDetailsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool AddRouteDetailsResult;
+        
+        public AddRouteDetailsResponseBody() {
+        }
+        
+        public AddRouteDetailsResponseBody(bool AddRouteDetailsResult) {
+            this.AddRouteDetailsResult = AddRouteDetailsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetRouteDetailsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRouteDetails", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequestBody Body;
+        
+        public GetRouteDetailsRequest() {
+        }
+        
+        public GetRouteDetailsRequest(BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetRouteDetailsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int sourceId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int destinationId;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public System.DateTime dateOfJourney;
+        
+        public GetRouteDetailsRequestBody() {
+        }
+        
+        public GetRouteDetailsRequestBody(int sourceId, int destinationId, System.DateTime dateOfJourney) {
+            this.sourceId = sourceId;
+            this.destinationId = destinationId;
+            this.dateOfJourney = dateOfJourney;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetRouteDetailsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetRouteDetailsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetRouteDetailsResponseBody Body;
+        
+        public GetRouteDetailsResponse() {
+        }
+        
+        public GetRouteDetailsResponse(BusProviderApplication.ProviderServiceReference.GetRouteDetailsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetRouteDetailsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetRouteDetails_Result[] GetRouteDetailsResult;
+        
+        public GetRouteDetailsResponseBody() {
+        }
+        
+        public GetRouteDetailsResponseBody(BusProviderApplication.ProviderServiceReference.GetRouteDetails_Result[] GetRouteDetailsResult) {
+            this.GetRouteDetailsResult = GetRouteDetailsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetBookingStatusesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBookingStatuses", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequestBody Body;
+        
+        public GetBookingStatusesRequest() {
+        }
+        
+        public GetBookingStatusesRequest(BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetBookingStatusesRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int busId;
+        
+        public GetBookingStatusesRequestBody() {
+        }
+        
+        public GetBookingStatusesRequestBody(int busId) {
+            this.busId = busId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetBookingStatusesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetBookingStatusesResponse", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetBookingStatusesResponseBody Body;
+        
+        public GetBookingStatusesResponse() {
+        }
+        
+        public GetBookingStatusesResponse(BusProviderApplication.ProviderServiceReference.GetBookingStatusesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetBookingStatusesResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetBookingStatus_Result[] GetBookingStatusesResult;
+        
+        public GetBookingStatusesResponseBody() {
+        }
+        
+        public GetBookingStatusesResponseBody(BusProviderApplication.ProviderServiceReference.GetBookingStatus_Result[] GetBookingStatusesResult) {
+            this.GetBookingStatusesResult = GetBookingStatusesResult;
         }
     }
     
@@ -1052,90 +1222,17 @@ namespace BusProviderApplication.ProviderServiceReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BusProviderApplication.ProviderServiceReference.HelloWorldResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.HelloWorld(BusProviderApplication.ProviderServiceReference.HelloWorldRequest request) {
-            return base.Channel.HelloWorld(request);
-        }
-        
-        public string HelloWorld() {
-            BusProviderApplication.ProviderServiceReference.HelloWorldRequest inValue = new BusProviderApplication.ProviderServiceReference.HelloWorldRequest();
-            inValue.Body = new BusProviderApplication.ProviderServiceReference.HelloWorldRequestBody();
-            BusProviderApplication.ProviderServiceReference.HelloWorldResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).HelloWorld(inValue);
-            return retVal.Body.HelloWorldResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.HelloWorldResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.HelloWorldAsync(BusProviderApplication.ProviderServiceReference.HelloWorldRequest request) {
-            return base.Channel.HelloWorldAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.HelloWorldResponse> HelloWorldAsync() {
-            BusProviderApplication.ProviderServiceReference.HelloWorldRequest inValue = new BusProviderApplication.ProviderServiceReference.HelloWorldRequest();
-            inValue.Body = new BusProviderApplication.ProviderServiceReference.HelloWorldRequestBody();
-            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).HelloWorldAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BusProviderApplication.ProviderServiceReference.GetProviderDetailsResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetProviderDetails(BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequest request) {
-            return base.Channel.GetProviderDetails(request);
-        }
-        
-        public BusProviderApplication.ProviderServiceReference.GetProviderDetails_Result[] GetProviderDetails() {
-            BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequest();
-            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequestBody();
-            BusProviderApplication.ProviderServiceReference.GetProviderDetailsResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetProviderDetails(inValue);
-            return retVal.Body.GetProviderDetailsResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetProviderDetailsResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetProviderDetailsAsync(BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequest request) {
-            return base.Channel.GetProviderDetailsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetProviderDetailsResponse> GetProviderDetailsAsync() {
-            BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequest();
-            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetProviderDetailsRequestBody();
-            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetProviderDetailsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BusProviderApplication.ProviderServiceReference.InsertIntoProviderResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.InsertIntoProvider(BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequest request) {
-            return base.Channel.InsertIntoProvider(request);
-        }
-        
-        public void InsertIntoProvider(string name, string contact) {
-            BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequest inValue = new BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequest();
-            inValue.Body = new BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequestBody();
-            inValue.Body.name = name;
-            inValue.Body.contact = contact;
-            BusProviderApplication.ProviderServiceReference.InsertIntoProviderResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).InsertIntoProvider(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.InsertIntoProviderResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.InsertIntoProviderAsync(BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequest request) {
-            return base.Channel.InsertIntoProviderAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.InsertIntoProviderResponse> InsertIntoProviderAsync(string name, string contact) {
-            BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequest inValue = new BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequest();
-            inValue.Body = new BusProviderApplication.ProviderServiceReference.InsertIntoProviderRequestBody();
-            inValue.Body.name = name;
-            inValue.Body.contact = contact;
-            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).InsertIntoProviderAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         BusProviderApplication.ProviderServiceReference.InsertBusDetailsResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.InsertBusDetails(BusProviderApplication.ProviderServiceReference.InsertBusDetailsRequest request) {
             return base.Channel.InsertBusDetails(request);
         }
         
-        public void InsertBusDetails(string busName, int capacity, string type, string busNo, int providerId) {
+        public void InsertBusDetails(string busName, int capacity, string type, string busNo) {
             BusProviderApplication.ProviderServiceReference.InsertBusDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.InsertBusDetailsRequest();
             inValue.Body = new BusProviderApplication.ProviderServiceReference.InsertBusDetailsRequestBody();
             inValue.Body.busName = busName;
             inValue.Body.capacity = capacity;
             inValue.Body.type = type;
             inValue.Body.busNo = busNo;
-            inValue.Body.providerId = providerId;
             BusProviderApplication.ProviderServiceReference.InsertBusDetailsResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).InsertBusDetails(inValue);
         }
         
@@ -1144,40 +1241,22 @@ namespace BusProviderApplication.ProviderServiceReference {
             return base.Channel.InsertBusDetailsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.InsertBusDetailsResponse> InsertBusDetailsAsync(string busName, int capacity, string type, string busNo, int providerId) {
+        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.InsertBusDetailsResponse> InsertBusDetailsAsync(string busName, int capacity, string type, string busNo) {
             BusProviderApplication.ProviderServiceReference.InsertBusDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.InsertBusDetailsRequest();
             inValue.Body = new BusProviderApplication.ProviderServiceReference.InsertBusDetailsRequestBody();
             inValue.Body.busName = busName;
             inValue.Body.capacity = capacity;
             inValue.Body.type = type;
             inValue.Body.busNo = busNo;
-            inValue.Body.providerId = providerId;
             return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).InsertBusDetailsAsync(inValue);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BusProviderApplication.ProviderServiceReference.DeleteBusResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.DeleteBus(BusProviderApplication.ProviderServiceReference.DeleteBusRequest request) {
-            return base.Channel.DeleteBus(request);
+        public bool DeleteBus(int busId) {
+            return base.Channel.DeleteBus(busId);
         }
         
-        public bool DeleteBus(string busNo) {
-            BusProviderApplication.ProviderServiceReference.DeleteBusRequest inValue = new BusProviderApplication.ProviderServiceReference.DeleteBusRequest();
-            inValue.Body = new BusProviderApplication.ProviderServiceReference.DeleteBusRequestBody();
-            inValue.Body.busNo = busNo;
-            BusProviderApplication.ProviderServiceReference.DeleteBusResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).DeleteBus(inValue);
-            return retVal.Body.DeleteBusResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.DeleteBusResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.DeleteBusAsync(BusProviderApplication.ProviderServiceReference.DeleteBusRequest request) {
-            return base.Channel.DeleteBusAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.DeleteBusResponse> DeleteBusAsync(string busNo) {
-            BusProviderApplication.ProviderServiceReference.DeleteBusRequest inValue = new BusProviderApplication.ProviderServiceReference.DeleteBusRequest();
-            inValue.Body = new BusProviderApplication.ProviderServiceReference.DeleteBusRequestBody();
-            inValue.Body.busNo = busNo;
-            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).DeleteBusAsync(inValue);
+        public System.Threading.Tasks.Task<bool> DeleteBusAsync(int busId) {
+            return base.Channel.DeleteBusAsync(busId);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1262,26 +1341,144 @@ namespace BusProviderApplication.ProviderServiceReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetBusProviderDetails(BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequest request) {
-            return base.Channel.GetBusProviderDetails(request);
+        BusProviderApplication.ProviderServiceReference.AddCityDetailsResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.AddCityDetails(BusProviderApplication.ProviderServiceReference.AddCityDetailsRequest request) {
+            return base.Channel.AddCityDetails(request);
         }
         
-        public BusProviderApplication.ProviderServiceReference.GetBusProviderDetails_Result[] GetBusProviderDetails() {
-            BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequest();
-            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequestBody();
-            BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetBusProviderDetails(inValue);
-            return retVal.Body.GetBusProviderDetailsResult;
+        public bool AddCityDetails(string city, string state) {
+            BusProviderApplication.ProviderServiceReference.AddCityDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.AddCityDetailsRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.AddCityDetailsRequestBody();
+            inValue.Body.city = city;
+            inValue.Body.state = state;
+            BusProviderApplication.ProviderServiceReference.AddCityDetailsResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).AddCityDetails(inValue);
+            return retVal.Body.AddCityDetailsResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetBusProviderDetailsAsync(BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequest request) {
-            return base.Channel.GetBusProviderDetailsAsync(request);
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.AddCityDetailsResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.AddCityDetailsAsync(BusProviderApplication.ProviderServiceReference.AddCityDetailsRequest request) {
+            return base.Channel.AddCityDetailsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsResponse> GetBusProviderDetailsAsync() {
-            BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequest();
-            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetBusProviderDetailsRequestBody();
-            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetBusProviderDetailsAsync(inValue);
+        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.AddCityDetailsResponse> AddCityDetailsAsync(string city, string state) {
+            BusProviderApplication.ProviderServiceReference.AddCityDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.AddCityDetailsRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.AddCityDetailsRequestBody();
+            inValue.Body.city = city;
+            inValue.Body.state = state;
+            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).AddCityDetailsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BusProviderApplication.ProviderServiceReference.GetCityDetailsResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetCityDetails(BusProviderApplication.ProviderServiceReference.GetCityDetailsRequest request) {
+            return base.Channel.GetCityDetails(request);
+        }
+        
+        public BusProviderApplication.ProviderServiceReference.GetCityDetails_Result[] GetCityDetails() {
+            BusProviderApplication.ProviderServiceReference.GetCityDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.GetCityDetailsRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetCityDetailsRequestBody();
+            BusProviderApplication.ProviderServiceReference.GetCityDetailsResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetCityDetails(inValue);
+            return retVal.Body.GetCityDetailsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetCityDetailsResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetCityDetailsAsync(BusProviderApplication.ProviderServiceReference.GetCityDetailsRequest request) {
+            return base.Channel.GetCityDetailsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetCityDetailsResponse> GetCityDetailsAsync() {
+            BusProviderApplication.ProviderServiceReference.GetCityDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.GetCityDetailsRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetCityDetailsRequestBody();
+            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetCityDetailsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BusProviderApplication.ProviderServiceReference.AddRouteDetailsResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.AddRouteDetails(BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest request) {
+            return base.Channel.AddRouteDetails(request);
+        }
+        
+        public bool AddRouteDetails(int busId, int sourceId, int destinationId, System.DateTime dateOfJourney, double price, BusProviderApplication.ProviderServiceReference.TimeSpan arrivalTime, BusProviderApplication.ProviderServiceReference.TimeSpan departureTime) {
+            BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequestBody();
+            inValue.Body.busId = busId;
+            inValue.Body.sourceId = sourceId;
+            inValue.Body.destinationId = destinationId;
+            inValue.Body.dateOfJourney = dateOfJourney;
+            inValue.Body.price = price;
+            inValue.Body.arrivalTime = arrivalTime;
+            inValue.Body.departureTime = departureTime;
+            BusProviderApplication.ProviderServiceReference.AddRouteDetailsResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).AddRouteDetails(inValue);
+            return retVal.Body.AddRouteDetailsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.AddRouteDetailsResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.AddRouteDetailsAsync(BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest request) {
+            return base.Channel.AddRouteDetailsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.AddRouteDetailsResponse> AddRouteDetailsAsync(int busId, int sourceId, int destinationId, System.DateTime dateOfJourney, double price, BusProviderApplication.ProviderServiceReference.TimeSpan arrivalTime, BusProviderApplication.ProviderServiceReference.TimeSpan departureTime) {
+            BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequestBody();
+            inValue.Body.busId = busId;
+            inValue.Body.sourceId = sourceId;
+            inValue.Body.destinationId = destinationId;
+            inValue.Body.dateOfJourney = dateOfJourney;
+            inValue.Body.price = price;
+            inValue.Body.arrivalTime = arrivalTime;
+            inValue.Body.departureTime = departureTime;
+            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).AddRouteDetailsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BusProviderApplication.ProviderServiceReference.GetRouteDetailsResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetRouteDetails(BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequest request) {
+            return base.Channel.GetRouteDetails(request);
+        }
+        
+        public BusProviderApplication.ProviderServiceReference.GetRouteDetails_Result[] GetRouteDetails(int sourceId, int destinationId, System.DateTime dateOfJourney) {
+            BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequestBody();
+            inValue.Body.sourceId = sourceId;
+            inValue.Body.destinationId = destinationId;
+            inValue.Body.dateOfJourney = dateOfJourney;
+            BusProviderApplication.ProviderServiceReference.GetRouteDetailsResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetRouteDetails(inValue);
+            return retVal.Body.GetRouteDetailsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetRouteDetailsResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetRouteDetailsAsync(BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequest request) {
+            return base.Channel.GetRouteDetailsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetRouteDetailsResponse> GetRouteDetailsAsync(int sourceId, int destinationId, System.DateTime dateOfJourney) {
+            BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetRouteDetailsRequestBody();
+            inValue.Body.sourceId = sourceId;
+            inValue.Body.destinationId = destinationId;
+            inValue.Body.dateOfJourney = dateOfJourney;
+            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetRouteDetailsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BusProviderApplication.ProviderServiceReference.GetBookingStatusesResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetBookingStatuses(BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequest request) {
+            return base.Channel.GetBookingStatuses(request);
+        }
+        
+        public BusProviderApplication.ProviderServiceReference.GetBookingStatus_Result[] GetBookingStatuses(int busId) {
+            BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequest inValue = new BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequestBody();
+            inValue.Body.busId = busId;
+            BusProviderApplication.ProviderServiceReference.GetBookingStatusesResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetBookingStatuses(inValue);
+            return retVal.Body.GetBookingStatusesResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetBookingStatusesResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetBookingStatusesAsync(BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequest request) {
+            return base.Channel.GetBookingStatusesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetBookingStatusesResponse> GetBookingStatusesAsync(int busId) {
+            BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequest inValue = new BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequestBody();
+            inValue.Body.busId = busId;
+            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetBookingStatusesAsync(inValue);
         }
     }
 }

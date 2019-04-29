@@ -8,46 +8,30 @@ namespace BusProviderApplication.Controllers
 {
     public class HomeController : Controller
     {
-        ProviderServiceReference.ProvidersWebServiceSoapClient soapClient = new ProviderServiceReference.ProvidersWebServiceSoapClient();
+       public ProviderServiceReference.ProvidersWebServiceSoapClient soapClient = new ProviderServiceReference.ProvidersWebServiceSoapClient();
         // GET: Home
         public ActionResult Index()
         {
 
             return View();
         }
-        public PartialViewResult GetProviders()
-        {
-            var result = soapClient.GetProviderDetails();
-            
-            return PartialView("_ProviderList",result);
-        }
+         
 
-        public PartialViewResult InsertProviderDetail()
-        {
-            //var result = soapClient.InsertIntoProvider();
-
-            return PartialView("_InsertProvider");
-        }
-        [HttpPost]
-        public ActionResult InsertProviderDetail(FormCollection formCollection)
-        {
-            soapClient.InsertIntoProvider(formCollection["OrganisationName"],formCollection["ContactNo"]);
-
-            return RedirectToAction("GetProviders");
-        }
+       
+        
         public PartialViewResult InsertBusDetail()
         {
              
-            ViewBag.ProviderList = new SelectList(soapClient.GetProviderDetails(), "ProviderID", "OrganisationName");
+            
 
             return PartialView("_AddBus");
         }
         [HttpPost]
         public ActionResult InsertBusDetail(FormCollection formCollection)
         {
-            soapClient.InsertBusDetails(formCollection["BusName"],Convert.ToInt32( formCollection["Capacity"]), formCollection["Type"], formCollection["BusNo"],Convert.ToInt32( formCollection["ProviderList"]));
+            soapClient.InsertBusDetails(formCollection["BusName"],Convert.ToInt32( formCollection["Capacity"]), formCollection["Type"], formCollection["BusNo"]);
 
-            return RedirectToAction("GetBusDetails");
+            return RedirectToAction("Index");
         }
         public PartialViewResult GetBusDetails()
         {
@@ -62,5 +46,37 @@ namespace BusProviderApplication.Controllers
 
             return PartialView("_SeatLayout");
         }
+        public PartialViewResult AddCity()
+        {
+
+            return PartialView("_AddCity");
+        }
+        [HttpPost]
+        public ActionResult AddCity(FormCollection formCollection)
+        {
+            soapClient.AddCityDetails(formCollection["CityName"] ,formCollection["CityState"]);
+
+            return RedirectToAction("Index");
+        }
+        public  PartialViewResult GetCityDetails()
+        {
+
+            return PartialView("_CityList",soapClient.GetCityDetails());
+        }
+        public PartialViewResult SearchRoute()
+        {
+            ViewBag.Source = new SelectList(soapClient.GetCityDetails(), "CityId", "CityName");
+            ViewBag.Destination = new SelectList(soapClient.GetCityDetails(), "CityId", "CityName");
+
+            return PartialView("_SearchRoute");
+        }
+        [HttpPost]
+        public ActionResult SearchRoute(FormCollection formCollection)
+        {
+           var result= soapClient.GetRouteDetails(Convert.ToInt32( formCollection["Source"]),Convert.ToInt32( formCollection["Destination"]),Convert.ToDateTime( formCollection["DateOfJourney"]).Date);
+
+            return View(result);
+        }
     }
+    
 }
