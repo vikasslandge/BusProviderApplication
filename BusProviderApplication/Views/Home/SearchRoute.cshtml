@@ -9,13 +9,14 @@
             @Html.DisplayNameFor(model => model.RouteId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BusId)
+            @Html.DisplayNameFor(model => model.BusName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SourceId)
+            @Html.DisplayNameFor(model => model.DepartureTime)
+
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DestinationId)
+            @Html.DisplayNameFor(model => model.ArrivalTime)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DateOfJourney)
@@ -23,6 +24,12 @@
         <th>
             @Html.DisplayNameFor(model => model.Price)
         </th>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.AvailableSeats)
+        </td>
+        <td>
+            @Html.DisplayNameFor(modelItem => modelItem.Type)
+        </td>
         <th></th>
     </tr>
 
@@ -32,25 +39,32 @@
             @Html.DisplayFor(modelItem => item.RouteId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.BusId)
+            @Html.DisplayFor(modelItem => item.BusName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.SourceId)
+
+            @Html.DisplayFor(modelItem => item.DepartureTime)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DestinationId)
+            @Html.DisplayFor(modelItem => item.ArrivalTime)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DateOfJourney)
+            @Html.DisplayFor(modelItem => item.DateOfJourney.Date)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.AvailableSeats)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        @*<td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
             @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
             @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
+        </td>*@
     </tr>
 }
 

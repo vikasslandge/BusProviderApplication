@@ -172,8 +172,12 @@
           <s:element minOccurs="1" maxOccurs="1" name="DestinationId" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="DateOfJourney" type="s:dateTime" />
           <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="ArrivalTime" type="tns:TimeSpan" />
-          <s:element minOccurs="1" maxOccurs="1" name="DepartureTime" type="tns:TimeSpan" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArrivalTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepartureTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BusName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BusNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AvailableSeats" nillable="true" type="s:int" />
         </s:sequence>
       </s:complexType>
       <s:element name="GetBookingStatuses">

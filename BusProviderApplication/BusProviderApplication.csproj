@@ -189,6 +189,7 @@
     <Content Include="Views\Shared\_CityList.cshtml" />
     <Content Include="Views\Shared\_SearchRoute.cshtml" />
     <Content Include="Views\Home\SearchRoute.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplate\_ShortDateTime.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

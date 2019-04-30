@@ -246,9 +246,22 @@ namespace BusProviderApplication.ProviderServiceReference {
         
         private double PriceField;
         
-        private BusProviderApplication.ProviderServiceReference.TimeSpan ArrivalTimeField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ArrivalTimeField;
         
-        private BusProviderApplication.ProviderServiceReference.TimeSpan DepartureTimeField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DepartureTimeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BusNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TypeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BusNoField;
+        
+        private System.Nullable<int> AvailableSeatsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -338,8 +351,8 @@ namespace BusProviderApplication.ProviderServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=6)]
-        public BusProviderApplication.ProviderServiceReference.TimeSpan ArrivalTime {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string ArrivalTime {
             get {
                 return this.ArrivalTimeField;
             }
@@ -351,8 +364,8 @@ namespace BusProviderApplication.ProviderServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=7)]
-        public BusProviderApplication.ProviderServiceReference.TimeSpan DepartureTime {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string DepartureTime {
             get {
                 return this.DepartureTimeField;
             }
@@ -360,6 +373,58 @@ namespace BusProviderApplication.ProviderServiceReference {
                 if ((object.ReferenceEquals(this.DepartureTimeField, value) != true)) {
                     this.DepartureTimeField = value;
                     this.RaisePropertyChanged("DepartureTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string BusName {
+            get {
+                return this.BusNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BusNameField, value) != true)) {
+                    this.BusNameField = value;
+                    this.RaisePropertyChanged("BusName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
+        public string Type {
+            get {
+                return this.TypeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TypeField, value) != true)) {
+                    this.TypeField = value;
+                    this.RaisePropertyChanged("Type");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
+        public string BusNo {
+            get {
+                return this.BusNoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BusNoField, value) != true)) {
+                    this.BusNoField = value;
+                    this.RaisePropertyChanged("BusNo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=11)]
+        public System.Nullable<int> AvailableSeats {
+            get {
+                return this.AvailableSeatsField;
+            }
+            set {
+                if ((this.AvailableSeatsField.Equals(value) != true)) {
+                    this.AvailableSeatsField = value;
+                    this.RaisePropertyChanged("AvailableSeats");
                 }
             }
         }
