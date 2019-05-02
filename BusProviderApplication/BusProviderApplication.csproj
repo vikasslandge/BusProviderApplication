@@ -129,6 +129,15 @@
     <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.InsertBusDetailsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.AddPassangerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetPassangerDetails_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ProviderServiceReference\BusProviderApplication.ProviderServiceReference.GetPassengerDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ProviderServiceReference\ProvidersWebService.disco" />
     <None Include="Connected Services\ProviderServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\ProviderServiceReference\configuration.svcinfo" />

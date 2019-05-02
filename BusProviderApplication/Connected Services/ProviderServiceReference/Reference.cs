@@ -246,11 +246,9 @@ namespace BusProviderApplication.ProviderServiceReference {
         
         private double PriceField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ArrivalTimeField;
+        private BusProviderApplication.ProviderServiceReference.TimeSpan ArrivalTimeField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string DepartureTimeField;
+        private BusProviderApplication.ProviderServiceReference.TimeSpan DepartureTimeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string BusNameField;
@@ -260,6 +258,8 @@ namespace BusProviderApplication.ProviderServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string BusNoField;
+        
+        private System.Nullable<int> RatingField;
         
         private System.Nullable<int> AvailableSeatsField;
         
@@ -351,8 +351,8 @@ namespace BusProviderApplication.ProviderServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string ArrivalTime {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=6)]
+        public BusProviderApplication.ProviderServiceReference.TimeSpan ArrivalTime {
             get {
                 return this.ArrivalTimeField;
             }
@@ -364,8 +364,8 @@ namespace BusProviderApplication.ProviderServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
-        public string DepartureTime {
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=7)]
+        public BusProviderApplication.ProviderServiceReference.TimeSpan DepartureTime {
             get {
                 return this.DepartureTimeField;
             }
@@ -417,6 +417,19 @@ namespace BusProviderApplication.ProviderServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=11)]
+        public System.Nullable<int> Rating {
+            get {
+                return this.RatingField;
+            }
+            set {
+                if ((this.RatingField.Equals(value) != true)) {
+                    this.RatingField = value;
+                    this.RaisePropertyChanged("Rating");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=12)]
         public System.Nullable<int> AvailableSeats {
             get {
                 return this.AvailableSeatsField;
@@ -530,6 +543,143 @@ namespace BusProviderApplication.ProviderServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetPassangerDetails_Result", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class GetPassangerDetails_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int PassengerIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        private int AgeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string GenderField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PhoneField;
+        
+        private int TicketIdField;
+        
+        private int SeatNoField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int PassengerId {
+            get {
+                return this.PassengerIdField;
+            }
+            set {
+                if ((this.PassengerIdField.Equals(value) != true)) {
+                    this.PassengerIdField = value;
+                    this.RaisePropertyChanged("PassengerId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int Age {
+            get {
+                return this.AgeField;
+            }
+            set {
+                if ((this.AgeField.Equals(value) != true)) {
+                    this.AgeField = value;
+                    this.RaisePropertyChanged("Age");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string Gender {
+            get {
+                return this.GenderField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.GenderField, value) != true)) {
+                    this.GenderField = value;
+                    this.RaisePropertyChanged("Gender");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string Phone {
+            get {
+                return this.PhoneField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PhoneField, value) != true)) {
+                    this.PhoneField = value;
+                    this.RaisePropertyChanged("Phone");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
+        public int TicketId {
+            get {
+                return this.TicketIdField;
+            }
+            set {
+                if ((this.TicketIdField.Equals(value) != true)) {
+                    this.TicketIdField = value;
+                    this.RaisePropertyChanged("TicketId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public int SeatNo {
+            get {
+                return this.SeatNoField;
+            }
+            set {
+                if ((this.SeatNoField.Equals(value) != true)) {
+                    this.SeatNoField = value;
+                    this.RaisePropertyChanged("SeatNo");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ProviderServiceReference.ProvidersWebServiceSoap")]
     public interface ProvidersWebServiceSoap {
@@ -602,6 +752,32 @@ namespace BusProviderApplication.ProviderServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetBookingStatuses", ReplyAction="*")]
         System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetBookingStatusesResponse> GetBookingStatusesAsync(BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BookTicket", ReplyAction="*")]
+        bool BookTicket(int seatNo, int busId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/BookTicket", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> BookTicketAsync(int seatNo, int busId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddTicketDetails", ReplyAction="*")]
+        bool AddTicketDetails(int routeId, int totalNumberOfSeats);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddTicketDetails", ReplyAction="*")]
+        System.Threading.Tasks.Task<bool> AddTicketDetailsAsync(int routeId, int totalNumberOfSeats);
+        
+        // CODEGEN: Generating message contract since element name name from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddPassanger", ReplyAction="*")]
+        BusProviderApplication.ProviderServiceReference.AddPassangerResponse AddPassanger(BusProviderApplication.ProviderServiceReference.AddPassangerRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddPassanger", ReplyAction="*")]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.AddPassangerResponse> AddPassangerAsync(BusProviderApplication.ProviderServiceReference.AddPassangerRequest request);
+        
+        // CODEGEN: Generating message contract since element name GetPassengerDetailsResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPassengerDetails", ReplyAction="*")]
+        BusProviderApplication.ProviderServiceReference.GetPassengerDetailsResponse GetPassengerDetails(BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetPassengerDetails", ReplyAction="*")]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetPassengerDetailsResponse> GetPassengerDetailsAsync(BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1259,6 +1435,158 @@ namespace BusProviderApplication.ProviderServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddPassangerRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddPassanger", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.AddPassangerRequestBody Body;
+        
+        public AddPassangerRequest() {
+        }
+        
+        public AddPassangerRequest(BusProviderApplication.ProviderServiceReference.AddPassangerRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddPassangerRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string name;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public int age;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string gender;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string number;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
+        public int seatNo;
+        
+        public AddPassangerRequestBody() {
+        }
+        
+        public AddPassangerRequestBody(string name, int age, string gender, string number, int seatNo) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.number = number;
+            this.seatNo = seatNo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class AddPassangerResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="AddPassangerResponse", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.AddPassangerResponseBody Body;
+        
+        public AddPassangerResponse() {
+        }
+        
+        public AddPassangerResponse(BusProviderApplication.ProviderServiceReference.AddPassangerResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class AddPassangerResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public bool AddPassangerResult;
+        
+        public AddPassangerResponseBody() {
+        }
+        
+        public AddPassangerResponseBody(bool AddPassangerResult) {
+            this.AddPassangerResult = AddPassangerResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetPassengerDetailsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPassengerDetails", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequestBody Body;
+        
+        public GetPassengerDetailsRequest() {
+        }
+        
+        public GetPassengerDetailsRequest(BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetPassengerDetailsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int ticketId;
+        
+        public GetPassengerDetailsRequestBody() {
+        }
+        
+        public GetPassengerDetailsRequestBody(int ticketId) {
+            this.ticketId = ticketId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetPassengerDetailsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetPassengerDetailsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetPassengerDetailsResponseBody Body;
+        
+        public GetPassengerDetailsResponse() {
+        }
+        
+        public GetPassengerDetailsResponse(BusProviderApplication.ProviderServiceReference.GetPassengerDetailsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetPassengerDetailsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public BusProviderApplication.ProviderServiceReference.GetPassangerDetails_Result[] GetPassengerDetailsResult;
+        
+        public GetPassengerDetailsResponseBody() {
+        }
+        
+        public GetPassengerDetailsResponseBody(BusProviderApplication.ProviderServiceReference.GetPassangerDetails_Result[] GetPassengerDetailsResult) {
+            this.GetPassengerDetailsResult = GetPassengerDetailsResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ProvidersWebServiceSoapChannel : BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -1544,6 +1872,80 @@ namespace BusProviderApplication.ProviderServiceReference {
             inValue.Body = new BusProviderApplication.ProviderServiceReference.GetBookingStatusesRequestBody();
             inValue.Body.busId = busId;
             return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetBookingStatusesAsync(inValue);
+        }
+        
+        public bool BookTicket(int seatNo, int busId) {
+            return base.Channel.BookTicket(seatNo, busId);
+        }
+        
+        public System.Threading.Tasks.Task<bool> BookTicketAsync(int seatNo, int busId) {
+            return base.Channel.BookTicketAsync(seatNo, busId);
+        }
+        
+        public bool AddTicketDetails(int routeId, int totalNumberOfSeats) {
+            return base.Channel.AddTicketDetails(routeId, totalNumberOfSeats);
+        }
+        
+        public System.Threading.Tasks.Task<bool> AddTicketDetailsAsync(int routeId, int totalNumberOfSeats) {
+            return base.Channel.AddTicketDetailsAsync(routeId, totalNumberOfSeats);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BusProviderApplication.ProviderServiceReference.AddPassangerResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.AddPassanger(BusProviderApplication.ProviderServiceReference.AddPassangerRequest request) {
+            return base.Channel.AddPassanger(request);
+        }
+        
+        public bool AddPassanger(string name, int age, string gender, string number, int seatNo) {
+            BusProviderApplication.ProviderServiceReference.AddPassangerRequest inValue = new BusProviderApplication.ProviderServiceReference.AddPassangerRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.AddPassangerRequestBody();
+            inValue.Body.name = name;
+            inValue.Body.age = age;
+            inValue.Body.gender = gender;
+            inValue.Body.number = number;
+            inValue.Body.seatNo = seatNo;
+            BusProviderApplication.ProviderServiceReference.AddPassangerResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).AddPassanger(inValue);
+            return retVal.Body.AddPassangerResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.AddPassangerResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.AddPassangerAsync(BusProviderApplication.ProviderServiceReference.AddPassangerRequest request) {
+            return base.Channel.AddPassangerAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.AddPassangerResponse> AddPassangerAsync(string name, int age, string gender, string number, int seatNo) {
+            BusProviderApplication.ProviderServiceReference.AddPassangerRequest inValue = new BusProviderApplication.ProviderServiceReference.AddPassangerRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.AddPassangerRequestBody();
+            inValue.Body.name = name;
+            inValue.Body.age = age;
+            inValue.Body.gender = gender;
+            inValue.Body.number = number;
+            inValue.Body.seatNo = seatNo;
+            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).AddPassangerAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        BusProviderApplication.ProviderServiceReference.GetPassengerDetailsResponse BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetPassengerDetails(BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequest request) {
+            return base.Channel.GetPassengerDetails(request);
+        }
+        
+        public BusProviderApplication.ProviderServiceReference.GetPassangerDetails_Result[] GetPassengerDetails(int ticketId) {
+            BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequestBody();
+            inValue.Body.ticketId = ticketId;
+            BusProviderApplication.ProviderServiceReference.GetPassengerDetailsResponse retVal = ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetPassengerDetails(inValue);
+            return retVal.Body.GetPassengerDetailsResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetPassengerDetailsResponse> BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap.GetPassengerDetailsAsync(BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequest request) {
+            return base.Channel.GetPassengerDetailsAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.GetPassengerDetailsResponse> GetPassengerDetailsAsync(int ticketId) {
+            BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequest();
+            inValue.Body = new BusProviderApplication.ProviderServiceReference.GetPassengerDetailsRequestBody();
+            inValue.Body.ticketId = ticketId;
+            return ((BusProviderApplication.ProviderServiceReference.ProvidersWebServiceSoap)(this)).GetPassengerDetailsAsync(inValue);
         }
     }
 }
