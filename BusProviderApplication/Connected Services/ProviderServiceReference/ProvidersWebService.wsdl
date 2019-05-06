@@ -130,12 +130,11 @@
             <s:element minOccurs="1" maxOccurs="1" name="destinationId" type="s:int" />
             <s:element minOccurs="1" maxOccurs="1" name="dateOfJourney" type="s:dateTime" />
             <s:element minOccurs="1" maxOccurs="1" name="price" type="s:double" />
-            <s:element minOccurs="1" maxOccurs="1" name="arrivalTime" type="tns:TimeSpan" />
-            <s:element minOccurs="1" maxOccurs="1" name="departureTime" type="tns:TimeSpan" />
+            <s:element minOccurs="0" maxOccurs="1" name="arrivalTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="departureTime" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="TimeSpan" />
       <s:element name="AddRouteDetailsResponse">
         <s:complexType>
           <s:sequence>
@@ -170,10 +169,10 @@
           <s:element minOccurs="1" maxOccurs="1" name="BusId" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="SourceId" type="s:int" />
           <s:element minOccurs="1" maxOccurs="1" name="DestinationId" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="DateOfJourney" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateOfJourney" type="s:string" />
           <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
-          <s:element minOccurs="1" maxOccurs="1" name="ArrivalTime" type="tns:TimeSpan" />
-          <s:element minOccurs="1" maxOccurs="1" name="DepartureTime" type="tns:TimeSpan" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArrivalTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepartureTime" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="BusName" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
           <s:element minOccurs="0" maxOccurs="1" name="BusNo" type="s:string" />

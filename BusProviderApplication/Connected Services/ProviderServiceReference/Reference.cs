@@ -198,35 +198,6 @@ namespace BusProviderApplication.ProviderServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TimeSpan", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class TimeSpan : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GetRouteDetails_Result", Namespace="http://tempuri.org/")]
     [System.SerializableAttribute()]
     public partial class GetRouteDetails_Result : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -242,13 +213,16 @@ namespace BusProviderApplication.ProviderServiceReference {
         
         private int DestinationIdField;
         
-        private System.DateTime DateOfJourneyField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DateOfJourneyField;
         
         private double PriceField;
         
-        private BusProviderApplication.ProviderServiceReference.TimeSpan ArrivalTimeField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ArrivalTimeField;
         
-        private BusProviderApplication.ProviderServiceReference.TimeSpan DepartureTimeField;
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DepartureTimeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string BusNameField;
@@ -325,13 +299,13 @@ namespace BusProviderApplication.ProviderServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public System.DateTime DateOfJourney {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string DateOfJourney {
             get {
                 return this.DateOfJourneyField;
             }
             set {
-                if ((this.DateOfJourneyField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.DateOfJourneyField, value) != true)) {
                     this.DateOfJourneyField = value;
                     this.RaisePropertyChanged("DateOfJourney");
                 }
@@ -351,8 +325,8 @@ namespace BusProviderApplication.ProviderServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=6)]
-        public BusProviderApplication.ProviderServiceReference.TimeSpan ArrivalTime {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string ArrivalTime {
             get {
                 return this.ArrivalTimeField;
             }
@@ -364,8 +338,8 @@ namespace BusProviderApplication.ProviderServiceReference {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, EmitDefaultValue=false, Order=7)]
-        public BusProviderApplication.ProviderServiceReference.TimeSpan DepartureTime {
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string DepartureTime {
             get {
                 return this.DepartureTimeField;
             }
@@ -1238,15 +1212,15 @@ namespace BusProviderApplication.ProviderServiceReference {
         public double price;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public BusProviderApplication.ProviderServiceReference.TimeSpan arrivalTime;
+        public string arrivalTime;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public BusProviderApplication.ProviderServiceReference.TimeSpan departureTime;
+        public string departureTime;
         
         public AddRouteDetailsRequestBody() {
         }
         
-        public AddRouteDetailsRequestBody(int busId, int sourceId, int destinationId, System.DateTime dateOfJourney, double price, BusProviderApplication.ProviderServiceReference.TimeSpan arrivalTime, BusProviderApplication.ProviderServiceReference.TimeSpan departureTime) {
+        public AddRouteDetailsRequestBody(int busId, int sourceId, int destinationId, System.DateTime dateOfJourney, double price, string arrivalTime, string departureTime) {
             this.busId = busId;
             this.sourceId = sourceId;
             this.destinationId = destinationId;
@@ -1788,7 +1762,7 @@ namespace BusProviderApplication.ProviderServiceReference {
             return base.Channel.AddRouteDetails(request);
         }
         
-        public bool AddRouteDetails(int busId, int sourceId, int destinationId, System.DateTime dateOfJourney, double price, BusProviderApplication.ProviderServiceReference.TimeSpan arrivalTime, BusProviderApplication.ProviderServiceReference.TimeSpan departureTime) {
+        public bool AddRouteDetails(int busId, int sourceId, int destinationId, System.DateTime dateOfJourney, double price, string arrivalTime, string departureTime) {
             BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest();
             inValue.Body = new BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequestBody();
             inValue.Body.busId = busId;
@@ -1807,7 +1781,7 @@ namespace BusProviderApplication.ProviderServiceReference {
             return base.Channel.AddRouteDetailsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.AddRouteDetailsResponse> AddRouteDetailsAsync(int busId, int sourceId, int destinationId, System.DateTime dateOfJourney, double price, BusProviderApplication.ProviderServiceReference.TimeSpan arrivalTime, BusProviderApplication.ProviderServiceReference.TimeSpan departureTime) {
+        public System.Threading.Tasks.Task<BusProviderApplication.ProviderServiceReference.AddRouteDetailsResponse> AddRouteDetailsAsync(int busId, int sourceId, int destinationId, System.DateTime dateOfJourney, double price, string arrivalTime, string departureTime) {
             BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest inValue = new BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequest();
             inValue.Body = new BusProviderApplication.ProviderServiceReference.AddRouteDetailsRequestBody();
             inValue.Body.busId = busId;
